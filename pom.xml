@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>eslint</artifactId>
-    <version>0.5.1-SNAPSHOT</version>
+    <version>0.5.1</version>
     <name>ESLint</name>
     <description>WebJar for ESLint</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/eslint</url>
         <connection>scm:git:https://github.com/webjars/eslint.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/eslint.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>eslint-0.5.1</tag>
     </scm>
     
     <properties>
@@ -80,7 +80,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/eslint-${upstream.version}" includes="bin/ lib/"/>
+                                    <fileset dir="${project.build.directory}/eslint-${upstream.version}" includes="bin/ lib/" />
                                 </move>
                             </target>
                         </configuration>
